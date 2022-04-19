@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href={{styles}}>
+</head>
+<div class="topic_container">
+    <div class="user">
+        <h1>{{user.nickname}}:</h1>
+    </div>
+    <div class="titl_content">
+        <div class="title">
+            <h1>{{post.title}}</h1>
+        </div>
+        <p class="content">{{post.content}}</p>
+    </div>
+    <div class="answers">
+        {% for i in range(length) %}
+            <h1>{{ users[i] }}:</h1>
+            <p>{{ answ[i] }}</p>
+        {% endfor %}
+    </div>
+    {% if current_user.is_authenticated %}
+    <div class="answ_form">
+        <form action="" method="post" class="ans_form_text">
+            <p>
+                {{ form.answer.label }}<br>
+                {{ form.answer(class="answer") }}
+            </p>
+            <p>
+                {{ form.submit(class="btn") }}
+            </p>
+        </form>
+    </div>
+    {% endif %}
+    <div class="space"><p> </p></div>
+</div>
+{% endblock %}

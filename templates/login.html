@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href={{style}}>
+</head>
+<div class="form">
+  <h1 class="log_in_form">Вход</h1>
+  <div class="form_fields">
+      <form action="" method="post">
+        <p>
+          {{ form.email.label }}<br>
+          {{ form.email(class="form-control", type="email") }}
+        </p>
+        <p>
+          {{ form.password.label }}<br>
+          {{ form.password(class="form-control", type="password") }}
+        </p>
+        <p>
+          {{ form.remember_me(class="check", type="checkbox") }}
+          {{ form.remember_me.label }}
+        </p>
+        <p>
+          {{ form.submit(class="btn", type="submit") }}
+        </p>
+        {{ message }}
+      </form>
+  </div>
+</div>
+{% endblock %}

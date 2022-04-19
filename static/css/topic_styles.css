@@ -1,0 +1,72 @@
+html, body, div, span{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.topic_container{
+    font-weight: 600;
+    font-size:18px;
+    padding-left:7%
+}
+
+.titl_content{
+    display: block;
+    justify-content: center;
+    margin-left: 14%;
+    width: 60%;
+}
+
+.title{
+    border: 2px solid blue;
+    word-break: break-all;
+    padding: 0 10px 0 10px;
+}
+
+.user{
+    margin: 50px 0 0 5%;
+}
+
+.answer{
+    height: 130px;
+    width: 350px;
+    resize: none;
+}
+
+.content{
+    margin-top:30px;
+    word-break: break-all;
+    border: 2px solid blue;
+    padding: 8px;
+}
+
+.answers{
+    margin-left:5%;
+}
+
+.answers p{
+    margin-left: 7%;
+    margin-top:30px;
+    word-break: break-all;
+    border: 2px solid red;
+    padding: 8px;
+    width: 60%;
+}
+
+.answ_form{
+    margin: 70px 0 0 178px;
+}
+
+.btn{
+    padding:10px 60px 10px 60px;
+    background-color: #3366ff;
+    border: 1px solid #3366ff;
+    border-radius: 5px;
+    color: white;
+}
+
+.space{
+    min-height: 200px;
+}

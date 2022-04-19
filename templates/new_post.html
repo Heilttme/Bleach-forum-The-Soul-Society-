@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href={{styles}}>
+</head>
+<div class="form">
+        <h1 class="post_head">Новое обсуждение</h1>
+        <div class="form_fields">
+        <form action="" method="post">
+            <p>
+            {{ form.title.label }}<br>
+            {{ form.title(class="form-control") }}
+            </p>
+            <p>
+            {{ form.text.label }}<br>
+            {{ form.text(class="textfield") }}
+            </p>
+            <p>
+            {{ form.submit(class="btn") }}
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock %}

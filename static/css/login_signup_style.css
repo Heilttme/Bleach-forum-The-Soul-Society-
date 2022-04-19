@@ -1,0 +1,68 @@
+html, body, div, span{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.form{
+    position: absolute;
+    padding-left: 43%;
+    font-size: 20px;
+}
+
+.form_fields{
+    position: relative;
+    right: 85px;
+}
+
+.form-control{
+    width:350px;
+    height:25px;
+}
+
+.btn{
+    width: 200px;
+    padding: 8px 10px;
+    margin: 10px 0px 0px 65px;
+    font-size: 15px;
+    border: 0px;
+    background-color: #3366ff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.msg{
+    position: relative;
+    right:10px;
+}
+
+.log_in_form{
+    position: relative;
+    left: 60px;
+    font-size: 30px;
+}
+
+.sign_up_form{
+    font-size: 30px;
+}
+
+.check{
+    cursor: pointer;
+}
+
+.textfield{
+    height: 200px;
+    width: 350px;
+}
+
+.post_head{
+    position:relative;
+    right:80px;
+}
+
+.textfield{
+    resize: none;
+}

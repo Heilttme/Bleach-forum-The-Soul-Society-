@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Soul Society</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="navigation">
+        <img src="static/img/main_ico.png" class="bleach_ico" alt="image not found" width="100" height="100">
+        <div class="head_text">
+            {% if current_user.is_authenticated %}
+            <ul>
+                <li><h1 class="for_name1">The Soul Society</h1></li>
+                <li><a href="/" class="main">Главная</a></li>
+                <li><a href="/forum" class="forum">Форум</a></li>
+                <li><a href="/logout" class="profile">{{username}}</a></li>
+            </ul>
+            {% else %}
+            <ul>
+                <li><h1 class="for_name2">The Soul Society</h1></li>
+                <li><a href="/" class="main">Главная</a></li>
+                <li><a href="/forum" class="forum">Форум</a></li>
+                <li><a href="/sign_up" class="sign_up">Регистрация</a></li>
+                <li><a href="/log_in" class="log_in">Вход</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

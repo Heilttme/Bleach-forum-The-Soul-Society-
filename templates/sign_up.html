@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <link rel="stylesheet" type="text/css" href={{style}}>
+</head>
+<div class="form">
+  <h1 class="sign_up_form">Регистрация</h1>
+  <div class="form_fields">
+    <form action="" method="post">
+      <p>
+        {{ form.nickname.label }}<br>
+        {{ form.nickname(class="form-control") }}
+      </p>
+      <p>
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control") }}
+      </p>
+      <p>
+        {{ form.surname.label }}<br>
+        {{ form.surname(class="form-control") }}
+      </p>
+      <p>
+        {{ form.email.label }}<br>
+        {{ form.email(class="form-control", type="email") }}
+      </p>
+      <p>
+        {{ form.password.label }}<br>
+        {{ form.password(class="form-control", type="password") }}
+      </p>
+      <p>
+        {{ form.password_again.label }}<br>
+        {{ form.password_again(class="form-control", type="password") }}
+      </p>
+      <p>
+        {{ form.submit(class="btn", type="submit") }}
+      </p>
+      <p class="msg">{{ message }}</p>
+    </form>
+  </div>
+</div>
+{% endblock %}

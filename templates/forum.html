@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href={{styles}}>
+    <script src="https://kit.fontawesome.com/c21f14637a.js" crossorigin="anonymous"></script>
+</head>
+<div CLASS="main_container">
+    <div class="main_box">
+        <div class="main_head">
+            <h1>Главный раздел</h1>
+            {% if current_user.is_authenticated %}
+            <a href="/new_post">Новая тема</a>
+            {% endif %}
+        </div>
+        <div class="posts">
+            {% for item in posts %}
+            <div class="post_forum">
+                <i class="fa-regular fa-message"></i>
+                <a href="/topic{{item.id}}" class="a_forum">{{ item.title }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="disscussions">
+        <div class="dissc_head">
+            <h1>Самое Обсуждаемое</h1>
+        </div>
+        {% for item in hot_disscussed %}
+            <div class="post_forum">
+                <i class="fa-regular fa-message"></i>
+                <a href="/topic{{item.id}}" class="a_forum">{{ item.title }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

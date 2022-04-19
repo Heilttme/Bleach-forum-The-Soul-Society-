@@ -1,0 +1,10 @@
+.main_text{
+    margin:30px;
+    font-size: 20px;
+}
+
+.main_container{
+    display: flex;
+    justify-position:center;
+    margin:30px 45px 0 45px;
+}
